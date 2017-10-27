@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>To Do List</title>
+  <link rel='stylesheet' type= 'text/css' href='/assets/style.css'>
+  <link rel='stylesheet' type= 'text/css' href='/assets/reset.css'>
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+<script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div id='todoTable'>
+      <form>
+        <input type="text" name="item" placeholder="Add To-DO" required />
+        <button type="submit">Add</button>
+      </form>
+        <ul>
+          <% for(cont i=0; i < items.length; i++) { %>
+            <li><%=items[i].item %></li>
+          <% } %>
+      </ul>
+</body>
+</html>
+<% include ./nav %>
