@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser')
 const todoController = {}
 
-const items = [{item: 'get milk'}, {item: 'walk dog'}, {item: 'kick ass'}]
+const items = [{item: '1'}, {item: '2'}, {item: '3'}]
 const urlencodedParser = bodyParser.urlencoded({extended: false})
 
 //referenced youtube videos

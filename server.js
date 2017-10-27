@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+const logger = require('morgan')
 
 const todoController = require('./controllers/todo-controller')
 
@@ -9,6 +10,12 @@ app.set('view engine', 'ejs')
 
 
 app.use('/assets', express.static('./public'))
+app.use(logger('dev'))
+app.get('/',(req,res) => {
+  res.send('hello')
+})
+//app.use('/*')
+
 
 todoController(app)
 
